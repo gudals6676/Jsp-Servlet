@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.BoardMapper"> <!-- 매퍼의 중복 이름이 있을때 에러가 뜨기때문에 namespace를 사용 -->
+	       <!-- DAO메서드와 이름을 동일하게       ,VO를 resultType에 기입해줌-->                         
+   
+    <select id="loginMember" resultType="loginVO">
+        select * from userTbl where user_id=#{user_id} and password=#{password}
+    </select>
+</mapper>
